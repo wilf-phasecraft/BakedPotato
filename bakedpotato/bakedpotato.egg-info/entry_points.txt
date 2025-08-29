@@ -1,2 +1,0 @@
-[console_scripts]
-bakedpotato = src.__main__:main

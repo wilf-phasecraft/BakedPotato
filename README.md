@@ -3,11 +3,12 @@
 To install
 
 ```bash
-pip install .
+pip install git+https://github.com/wilf-phasecraft/BakedPotato.git
 ```
 
 To run
 
 ```bash
-python3 -m bakedpotato
+bakedpotato
 ```
+

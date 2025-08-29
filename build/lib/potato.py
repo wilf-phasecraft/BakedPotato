@@ -1,6 +1,10 @@
 import tkinter as tk
 import random
+import os
 from PIL import Image, ImageTk  # pip install pillow
+
+
+ASSET_DIR = os.path.join(os.path.dirname(__file__), "assets")
 
 class PotatoApp(tk.Tk):
     def __init__(self):
@@ -9,8 +13,8 @@ class PotatoApp(tk.Tk):
         self.resizable(False, False)
 
         # Load images
-        self.raw_img = ImageTk.PhotoImage(Image.open("raw_potato.png").resize((256, 256), Image.NEAREST))
-        self.baked_img = ImageTk.PhotoImage(Image.open("baked_potato.png").resize((256, 256), Image.NEAREST))
+        self.raw_img = tk.PhotoImage(file=os.path.join(ASSET_DIR, "potato_raw.png"))
+        self.baked_img = tk.PhotoImage(file=os.path.join(ASSET_DIR, "potato_baked.png"))
 
         # Canvas
         self.canvas = tk.Canvas(self, width=256, height=256, bg="#cfe8ff", highlightthickness=0)
